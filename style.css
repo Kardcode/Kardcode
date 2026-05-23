@@ -12,12 +12,31 @@ body{
     justify-content:center;
     align-items:center;
 
-    background:linear-gradient(135deg,#0f172a,#1e293b,#0b1220);
 
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+ 
+    position: relative;
     color:white;
 }
 
-/* Контейнер */
+
+body::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+
+    background: rgba(0,0,0,0.5);
+    z-index:0;
+}
+
+
 .container{
     text-align:center;
     padding:40px;
@@ -30,15 +49,18 @@ body{
     border:1px solid rgba(255,255,255,0.1);
 
     box-shadow:0 0 40px rgba(0,0,0,0.5);
+
+    position:relative;
+    z-index:1; 
 }
 
-/* Заголовок */
+
 h1{
     font-size:50px;
     margin-bottom:20px;
 }
 
-/* Кнопки */
+
 .buttons{
     display:grid;
     grid-template-columns:repeat(2,1fr);
@@ -65,7 +87,6 @@ button{
 button:hover{
     transform:scale(1.05) translateY(-5px);
 }
-
 
 .btn1{background:#2563eb;}
 .btn2{background:#7c3aed;}
