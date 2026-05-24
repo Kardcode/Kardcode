@@ -127,24 +127,42 @@ button:hover{
 
 .btn1{
     background:linear-gradient(45deg,#2563eb,#06b6d4);
+    box-shadow: 0 0 10px #262dff;
 }
 
 .btn2{
     background:linear-gradient(45deg,#7c3aed,#9333ea);
+    box-shadow: 0 0 10px #4e04af;
 }
 
 .btn3{
     background:linear-gradient(45deg,#f59e0b,#facc15);
+    box-shadow: 0 0 10px #f5e508;
 }
 
 .btn4{
-    background:linear-gradient(45deg,#22c55e,#16a34a);
+    background:linear-gradient(45deg,#4c00ff,#5108b1);
+    box-shadow: 0 0 10px #7c0c69;
 }
 
 .btn5{
     background:linear-gradient(45deg,#ef4444,#dc2626);
+    box-shadow: 0 0 10px #ff0b0b;
 
     grid-column:span 2;
+}
+.btn6 {
+  background: #0e57e9;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+
+  box-shadow: 0 0 10px #262dff;
+}
+.btn7{
+    background:linear-gradient(45deg,#098d9e,#0b9292);
+    box-shadow: 0 0 10px #00ffea;
 }
 
 @keyframes show{
@@ -189,6 +207,14 @@ C++
 C#
 </button>
 
+<button class="btn6" onclick="ccode()">
+C
+</button>
+
+<button class="btn7" onclick="go()">
+Go
+</button>
+
 <button class="btn5" onclick="nice()">
 Разработчик сайта
 </button>
@@ -210,13 +236,20 @@ function python(){
 function cplus(){
     window.location.href = "cplus.html";
 }
+function ccode(){
+    window.location.href = "ccode.html";
+}
 
 function csharp(){
     window.location.href = "csharp.html";
 }
 
+function go(){
+    window.location.href = "go.html";
+}
+
 function nice(){
-    alert("Создатель сайта:Данил Кардаш ");
+    alert("Создатель сайта: Данил Кардаш ");
 }
 
 function a(){window.location.href="python.html"}
