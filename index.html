@@ -1,20 +1,14 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <meta name="google-site-verification" content="ТВОЙ_КОД_ОТ_GOOGLE" />
 
-
-
 <link rel="stylesheet" href="style.css">
-
-<link rel="icon" href="images/bg.jpg">
-
 <link rel="icon" href="images/bg.jpg" type="image/x-icon">
-
 
 <title>Kardgame</title>
 
@@ -26,6 +20,7 @@
     box-sizing:border-box;
 }
 
+/* BODY (адаптив + фон нормально масштабируется) */
 body{
     min-height:100vh;
 
@@ -40,87 +35,79 @@ body{
     radial-gradient(circle at bottom right,#7c3aed55,transparent 30%),
     linear-gradient(135deg,#020617,#0f172a,#111827);
 
-    overflow:hidden;
+    background-size: cover;
+    background-position: center;
+
+    overflow-x:hidden;
 }
 
+/* КОНТЕЙНЕР (адаптив) */
 .container{
-    width:900px;
+    width:90%;
+    max-width:900px;
+
     padding:50px;
 
     border-radius:30px;
 
     background:rgba(255,255,255,0.05);
-
     backdrop-filter:blur(15px);
 
     border:1px solid rgba(255,255,255,0.1);
 
-    box-shadow:
-    0 0 50px rgba(0,0,0,0.5);
+    box-shadow:0 0 50px rgba(0,0,0,0.5);
 
     text-align:center;
 
     animation:show 1s ease;
 }
 
+/* ТЕКСТ */
 h1{
     color:white;
     font-size:60px;
-
     margin-bottom:20px;
-
     text-shadow:0 0 20px rgba(255,255,255,0.2);
 }
 
 p{
     color:#cbd5e1;
-
     font-size:20px;
-
     margin-bottom:50px;
 }
 
+/* КНОПКИ */
 .buttons{
     display:grid;
-
     grid-template-columns:repeat(2,1fr);
-
     gap:25px;
 }
 
 button{
     padding:20px;
-
     border:none;
     border-radius:20px;
 
     color:white;
-
     font-size:22px;
     font-weight:bold;
 
     cursor:pointer;
-
     transition:0.3s;
 
     position:relative;
-
     overflow:hidden;
 }
 
+/* hover эффект */
 button::before{
     content:"";
-
     position:absolute;
-
     width:100%;
     height:100%;
-
     top:0;
     left:-100%;
-
     background:rgba(255,255,255,0.15);
-
     transition:0.4s;
 }
 
@@ -132,72 +119,98 @@ button:hover{
     transform:translateY(-8px) scale(1.03);
 }
 
+/* КНОПКИ ЦВЕТА */
 .btn1{
     background:linear-gradient(45deg,#2563eb,#06b6d4);
-    box-shadow: 0 0 10px #262dff;
+    box-shadow:0 0 10px #262dff;
 }
 
 .btn2{
     background:linear-gradient(45deg,#7c3aed,#9333ea);
-    box-shadow: 0 0 10px #4e04af;
+    box-shadow:0 0 10px #4e04af;
 }
 
 .btn3{
     background:linear-gradient(45deg,#f59e0b,#facc15);
-    box-shadow: 0 0 10px #f5e508;
+    box-shadow:0 0 10px #f5e508;
 }
 
 .btn4{
     background:linear-gradient(45deg,#4c00ff,#5108b1);
-    box-shadow: 0 0 10px #7c0c69;
+    box-shadow:0 0 10px #7c0c69;
 }
 
 .btn5{
     background:linear-gradient(45deg,#510778,#7a28a7);
-    box-shadow: 0 0 10px #f700ff;
+    box-shadow:0 0 10px #f700ff;
 
     grid-column:span 2;
 }
+
 .btn7{
     background:linear-gradient(45deg,#0901ff,#070157);
-    box-shadow: 0 0 10px #0262f3;
+    box-shadow:0 0 10px #0262f3;
 
     grid-column:span 2;
 }
 
-
+/* SIMPLE BUTTON */
 .btn6 {
   background: #0e57e9;
   color: white;
   padding: 15px;
   border: none;
   border-radius: 10px;
-
   box-shadow: 0 0 10px #262dff;
 }
 
-
+/* АНИМАЦИЯ */
 @keyframes show{
     from{
         opacity:0;
         transform:translateY(50px);
     }
-
     to{
         opacity:1;
         transform:translateY(0);
     }
 }
 
+/* 📱 МОБИЛЬНАЯ АДАПТАЦИЯ */
+@media (max-width: 768px){
+
+    h1{
+        font-size:32px;
+    }
+
+    p{
+        font-size:16px;
+        margin-bottom:30px;
+    }
+
+    .container{
+        padding:20px;
+        border-radius:20px;
+    }
+
+    .buttons{
+        grid-template-columns:1fr;
+    }
+
+    button{
+        font-size:18px;
+        padding:15px;
+    }
+}
+
 </style>
 </head>
+
 <body>
 
 <div class="container">
-<div class="logo"></div>
 
 <h1>🚀Games in Kardgame!</h1>
-
 
 <p>
  play in Kardgame🦾
@@ -205,11 +218,9 @@ button:hover{
 
 <div class="buttons">
 
-<button class="btn5" onclick="openPage()">
+<button class="btn7" onclick="openPage()">
  Скачать distma-game
 </button>
-
-
 
 <button class="btn5" onclick="nice()">
 Разработчик сайта
@@ -225,16 +236,16 @@ function openPage(){
     window.location.href = "python.html";
 }
 
-
 function nice(){
     alert("Создатель сайта: Данил Кардаш🌐 создатель игры: Дмитрий Кардаш💻");
 }
 
-function a(){window.location.href="index.html"}
+function a(){
+    window.location.href="index.html"
+}
 
 </script>
 
 </body>
 </html>
-
 
