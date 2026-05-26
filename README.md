@@ -1,1 +1,1 @@
-Учить языки програмирования для начинаючих это легко!.Learning programming languages ​​for beginners is easy!
+Ты любишь игры? Disma Игра нажми чтобы скачать! You love Game? disma game click in download!
