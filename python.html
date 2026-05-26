@@ -7,9 +7,7 @@
 <title>python</title>
 
 <link rel="stylesheet" href="style.css">
-
 <link rel="icon" href="images/bg.jpg">
-
 
 <style>
 
@@ -28,17 +26,18 @@ body{
     flex-direction:column;
 
     font-family:Arial;
-    
+
     background:linear-gradient(135deg,#0f172a,#1e293b,#111827);
 
-    overflow:hidden;
+    overflow-x:hidden;
+    padding:20px;
+    text-align:center;
 }
 
 h1{
     color:white;
     font-size:60px;
-    margin-bottom:50px;
-
+    margin-bottom:30px;
     animation:fade 1s ease;
 }
 
@@ -46,72 +45,56 @@ p{
     color:#cbd5e1;
     font-size:20px;
     margin-bottom:40px;
-
     animation:fade 1.5s ease;
 }
 
 h2{
     color:#cbd5e1;
     font-size:15px;
-
     max-width:800px;
-
     line-height:1.7;
-
     text-align:center;
-
     margin-bottom:40px;
-
     animation:fade 1.5s ease;
-
 }
+
 .buttons{
     display:flex;
     gap:20px;
+    flex-wrap:wrap;
+    justify-content:center;
 }
 
 button{
     padding:15px 35px;
-
     border:none;
     border-radius:15px;
-
     font-size:18px;
     font-weight:bold;
-
     cursor:pointer;
-
     transition:0.25s;
-
     color:white;
 }
 
 .btn1{
     background:linear-gradient(45deg,#3b82f6,#06b6d4);
-
     box-shadow:0 0 20px rgba(59,130,246,0.5);
 }
 
 .btn2{
     background:linear-gradient(45deg,#8b5cf6,#ec4899);
-
     box-shadow:0 0 20px rgba(236,72,153,0.5);
 }
 
 .btn3{
     background:linear-gradient(45deg,#3f00d0,#502ba4);
-
     box-shadow:0 0 20px rgba(169, 11, 194, 0.5);
 }
 
 .btn4{
     background:linear-gradient(45deg,#115be3,#0a52a9);
-
     box-shadow:0 0 20px rgba(4, 44, 145, 0.5);
 }
-
-
-
 
 button:hover{
     transform:translateY(-5px) scale(1.05);
@@ -126,7 +109,6 @@ button:active{
         opacity:0;
         transform:translateY(30px);
     }
-
     to{
         opacity:1;
         transform:translateY(0);
@@ -135,14 +117,10 @@ button:active{
 
 .circle{
     position:absolute;
-
     width:300px;
     height:300px;
-
     background:rgba(255,255,255,0.05);
-
     border-radius:50%;
-
     filter:blur(10px);
 }
 
@@ -156,8 +134,38 @@ button:active{
     right:-120px;
 }
 
+@media (max-width:768px){
+
+    h1{
+        font-size:32px;
+    }
+
+    h2{
+        font-size:13px;
+        padding:0 10px;
+    }
+
+    .buttons{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    button{
+        width:100%;
+        max-width:280px;
+        font-size:16px;
+        padding:12px 20px;
+    }
+
+    .circle{
+        width:180px;
+        height:180px;
+    }
+}
+
 </style>
 </head>
+
 <body>
 
 <div class="circle c1"></div>
@@ -166,24 +174,11 @@ button:active{
 <h1>Хотите поиграть в Disma?</h1>
 <h2>Нажимайте скачать👇</h2>
 
-
-
-
-
 <div class="buttons">
 
-    <button class="btn3" onclick="openPage()">
-        Скачать Kardlauncher💻
-         
-
-     </button>
-
-    
-    
-   
-
-    </button>
-
+<button class="btn3" onclick="openPage()">
+Скачать Kardlauncher💻
+</button>
 
 </div>
 
@@ -204,15 +199,16 @@ function his(){
 function openPage(){
     window.location.href = "index.html";
 }
+
 function nice(){
     alert("im danil kardash im nice boy😄")
-    
 }
 
-function a(){window.location.href="python.html"}
+function a(){
+    window.location.href="python.html"
+}
 
 </script>
 
 </body>
 </html>
-
