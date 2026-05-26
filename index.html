@@ -20,7 +20,7 @@
     box-sizing:border-box;
 }
 
-/* BODY (адаптив + фон нормально масштабируется) */
+
 body{
     min-height:100vh;
 
@@ -41,7 +41,7 @@ body{
     overflow-x:hidden;
 }
 
-/* КОНТЕЙНЕР (адаптив) */
+
 .container{
     width:90%;
     max-width:900px;
@@ -62,7 +62,7 @@ body{
     animation:show 1s ease;
 }
 
-/* ТЕКСТ */
+    
 h1{
     color:white;
     font-size:60px;
@@ -76,7 +76,7 @@ p{
     margin-bottom:50px;
 }
 
-/* КНОПКИ */
+
 .buttons{
     display:grid;
     grid-template-columns:repeat(2,1fr);
@@ -99,7 +99,6 @@ button{
     overflow:hidden;
 }
 
-/* hover эффект */
 button::before{
     content:"";
     position:absolute;
@@ -119,7 +118,7 @@ button:hover{
     transform:translateY(-8px) scale(1.03);
 }
 
-/* КНОПКИ ЦВЕТА */
+
 .btn1{
     background:linear-gradient(45deg,#2563eb,#06b6d4);
     box-shadow:0 0 10px #262dff;
@@ -154,7 +153,7 @@ button:hover{
     grid-column:span 2;
 }
 
-/* SIMPLE BUTTON */
+
 .btn6 {
   background: #0e57e9;
   color: white;
@@ -164,7 +163,7 @@ button:hover{
   box-shadow: 0 0 10px #262dff;
 }
 
-/* АНИМАЦИЯ */
+
 @keyframes show{
     from{
         opacity:0;
@@ -176,7 +175,7 @@ button:hover{
     }
 }
 
-/* 📱 МОБИЛЬНАЯ АДАПТАЦИЯ */
+
 @media (max-width: 768px){
 
     h1{
