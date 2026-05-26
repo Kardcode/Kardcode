@@ -10,7 +10,6 @@
 <link rel="icon" href="images/bg.jpg">
 
 <style>
-
 *{
     margin:0;
     padding:0;
@@ -19,20 +18,22 @@
 
 body{
     min-height:100vh;
-
     display:flex;
     justify-content:center;
     align-items:center;
-
     font-family:Arial;
-
     background-image:url('images/fonh.jpg');
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
-
     overflow-x:hidden;
     text-align:center;
+    position:relative;
+}
+
+.container{
+    position:relative;
+    z-index:2;
 }
 
 h1{
@@ -54,8 +55,7 @@ h2{
     font-size:25px;
     max-width:800px;
     line-height:1.7;
-    text-align:center;
-    margin-bottom:40px;
+    margin:0 auto 40px auto;
     animation:fade 1.5s ease;
 }
 
@@ -89,12 +89,12 @@ button{
 
 .btn3{
     background:linear-gradient(45deg,#3f00d0,#502ba4);
-    box-shadow:0 0 20px rgba(169, 11, 194, 0.5);
+    box-shadow:0 0 20px rgba(169,11,194,0.5);
 }
 
 .btn4{
     background:linear-gradient(45deg,#115be3,#0a52a9);
-    box-shadow:0 0 20px rgba(4, 44, 145, 0.5);
+    box-shadow:0 0 20px rgba(4,44,145,0.5);
 }
 
 button:hover{
@@ -123,6 +123,7 @@ button:active{
     background:rgba(255,255,255,0.05);
     border-radius:50%;
     filter:blur(10px);
+    z-index:1;
 }
 
 .c1{
@@ -163,7 +164,6 @@ button:active{
         height:180px;
     }
 }
-
 </style>
 </head>
 
@@ -185,8 +185,9 @@ button:active{
 
 </div>
 
-<script>
+</div>
 
+<script>
 function hello(){
     alert("Ты нажал первую кнопку!");
 }
@@ -196,7 +197,7 @@ function hello2(){
 }
 
 function his(){
-    alert("работает вроде!")
+    alert("работает вроде!");
 }
 
 function openPage(){
@@ -204,13 +205,12 @@ function openPage(){
 }
 
 function nice(){
-    alert("im danil kardash im nice boy😄")
+    alert("im danil kardash im nice boy😄");
 }
 
 function a(){
-    window.location.href="python.html"
+    window.location.href = "python.html";
 }
-
 </script>
 
 </body>
