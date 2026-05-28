@@ -1,1 +1,1 @@
-Ты любишь игры? Disma Игра нажми чтобы скачать! You love Game? disma game click in download!
+Хочешь изучить програмирования? Заходи на сайт! do you what learn programming? click web site!
