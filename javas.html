@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Java script</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="images/bg.jpg">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:Arial;
+    background-image:url('images/fonh.jpg');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    overflow-x:hidden;
+    text-align:center;
+    position:relative;
+}
+
+.container{
+    position:relative;
+    z-index:2;
+}
+
+h1{
+    color:white;
+    font-size:60px;
+    margin-bottom:30px;
+    animation:fade 1s ease;
+}
+
+p{
+    color:#cbd5e1;
+    font-size:20px;
+    margin-bottom:40px;
+    animation:fade 1.5s ease;
+}
+
+h2{
+    color:#cbd5e1;
+    font-size:25px;
+    max-width:800px;
+    line-height:1.7;
+    margin:0 auto 40px auto;
+    animation:fade 1.5s ease;
+}
+
+.buttons{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+button{
+    padding:15px 35px;
+    border:none;
+    border-radius:15px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.25s;
+    color:white;
+}
+
+.btn1{
+    background:linear-gradient(45deg,#3b82f6,#06b6d4);
+    box-shadow:0 0 20px rgba(59,130,246,0.5);
+}
+
+.btn2{
+    background:linear-gradient(45deg,#8b5cf6,#ec4899);
+    box-shadow:0 0 20px rgba(236,72,153,0.5);
+}
+
+.btn3{
+    background:linear-gradient(45deg,#000000,#ffffff);
+
+    box-shadow:0 0 20px rgb(255, 255, 255);
+}
+
+.btn4{
+    background:linear-gradient(45deg,#115be3,#0a52a9);
+    box-shadow:0 0 20px rgba(4,44,145,0.5);
+}
+
+button:hover{
+    transform:translateY(-5px) scale(1.05);
+}
+
+button:active{
+    transform:scale(0.95);
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.circle{
+    position:absolute;
+    width:300px;
+    height:300px;
+    background:rgba(255,255,255,0.05);
+    border-radius:50%;
+    filter:blur(10px);
+    z-index:1;
+}
+
+.c1{
+    top:-100px;
+    left:-100px;
+}
+
+.c2{
+    bottom:-120px;
+    right:-120px;
+}
+
+@media (max-width:768px){
+
+    h1{
+        font-size:32px;
+    }
+
+    h2{
+        font-size:24px;
+        padding:0 10px;
+    }
+
+    .buttons{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    button{
+        width:100%;
+        max-width:280px;
+        font-size:16px;
+        padding:12px 20px;
+    }
+
+    .circle{
+        width:180px;
+        height:180px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="circle c1"></div>
+<div class="circle c2"></div>
+
+<div class="container">
+
+<h1>Java script🌐</h1>
+<h2>JavaScript — это язык программирования, который делает сайты живыми и интерактивными. С его помощью создают кнопки, анимации, меню, игры, формы регистрации, чаты и даже целые веб-приложения. Почти каждый современный сайт использует JavaScript, потому что он работает прямо в браузере и позволяет быстро взаимодействовать с пользователем. Благодаря JavaScript веб-разработка стала одной из самых популярных и востребованных сфер в IT.
+</h2>
+
+<iframe 
+    width="400" 
+    height="225"
+    src="https://www.youtube.com/embed/fcMcf_4PjfI"
+    title="Java tutorial"
+    frameborder="0"
+    allowfullscreen>
+</iframe>
+
+<div class="buttons">
+
+<button class="btn3" onclick="openPage()">
+    menu⚙️
+
+
+</div>
+
+</div>
+
+<script>
+
+
+function openPage(){
+    window.location.href = "index.html";
+}
+
+
+
+function a(){
+    window.location.href = "python.html";
+}
+</script>
+
+</body>
+</html>
